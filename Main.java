@@ -1,6 +1,14 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 public class Main {
+     // Nueva función para saludar al usuario por su nombre
+    public static void saludarUsuario() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingrese su nombre: ");
+        String nombreUsuario = scanner.next();
+        System.out.println("Hola, " + nombreUsuario + ". Bienvenido a la tienda.");
+    }
+
     public static void main(String[] args) {
         Tienda tienda = new Tienda();
         Scanner scanner = new Scanner(System.in);
