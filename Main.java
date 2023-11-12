@@ -8,6 +8,17 @@ public class Main {
         String nombreUsuario = scanner.next();
         System.out.println("Hola, " + nombreUsuario + ". Bienvenido a la tienda.");
     }
+    // Nueva función para aplicar descuentos
+    public static void aplicarDescuentos(Tienda tienda) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("¿Desea aplicar descuentos? (S/N): ");
+        String respuesta = scanner.next();
+        if (respuesta.equalsIgnoreCase("S")) {
+            System.out.print("Ingrese el porcentaje de descuento: ");
+            double porcentajeDescuento = scanner.nextDouble();
+            tienda.aplicarDescuento(porcentajeDescuento);
+        }
+    }
 
     public static void main(String[] args) {
         Tienda tienda = new Tienda();
